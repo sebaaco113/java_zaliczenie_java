@@ -1,17 +1,19 @@
-package notDevices;
+package Creatures;
 
+import notDevices.Human;
+import notDevices.Saleable;
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Animal
+public abstract class Animal implements Saleable, Feedable
 {
     {
         private String name;
         private File pic;
         public  final String species;
-        BigDecimal weigth;
-        private  boolean isAlive = true;
+        private BigDecimal weigth;
+        protected   boolean isAlive = true;
         Animal( String nameC,  File pictureC, String species, BigDecimal weight)
         {
             name = nameC;
@@ -59,8 +61,25 @@ public class Animal
         }
         public  void feed()
         {
-            weigth.subtract(new BigDecimal(1));
-            System.out.println("Food eaten, animal weight's now: " + weigth);
+            if(isAlive)
+
+            {
+                weigth.subtract(new BigDecimal(1));
+                System.out.println("Nakarmiono, zwierzak waży " + weigth);
+            }
+            else
+                System.out.println("Martwe zwierzęta nie jedzą.");
+        }
+
+        public void feed(BigDecimal foodWeigth)
+        {
+            if (isAlive)
+            {
+                weigth = weigth.add(foodWeigth);
+                System.out.println("Nakarmiono, zwierzak waży " + this.weigth);
+            }
+            else
+                System.out.println("Martwe zwierzęta nie jedzą..");
         }
         public void goForWalk(Double distance)
         {
@@ -88,16 +107,16 @@ public class Animal
         public boolean animalState()
         {
             if (weigth.doubleValue() <= 0) {
-                System.out.println("notDevices.Animal is dead");
+                System.out.println("Creatures.Animal nie żyje);
                 isAlive = false;
                 return false;
             }
-            System.out.println("notDevices.Animal lives... yet");
+            System.out.println("Creatures.Animal jeszcze żyje");
             return true;
         }
         @Override
         public String toString() {
-        return "notDevices.Animal{" +
+        return "Creatures.Animal{" +
                 "name='" + name + '\'' +
                 ", pic=" + pic +
                 ", species='" + species + '\'' +

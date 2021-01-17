@@ -2,22 +2,23 @@ package notDevices;
 
 import devices.Car;
 import devices.Phone;
-import notDevices.Animal;
-import notDevices.Human;
+import Creatures.Pet
 
 import java.io.File;
+import java.math.BigDecimal;
 
 public class Program
 {
     public static void main(String[] args)
     {
-        Animal dog = new Animal("Brutus", new File("somedog.jpg"), "Pupper");
+        var dog = new Pet("Puszek", new File("somedog.jpg"), "Blablador", new BigDecimal(10.0));;
         var NowakPhone = new Phone("1234567890", "someNet", 9999888);
         var Human = new Human("Analiza","Kowalski", new Double(42), 000000001, NowakPhone, dog);
 
         dog.feed();
         dog.goForWalk(5.0);
         dog.goForWalk(15.0);
+        dog.feed(new BigDecimal(10.0));
         //doggo.goForWalk(15.0);
 
         var someNiceCar = new Car("458 Italia", "Ferrari", 730.0, "double wishbone rear suspension", 2011);
