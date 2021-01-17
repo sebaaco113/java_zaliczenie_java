@@ -14,7 +14,7 @@ public class Program
         dog.goForWalk(15.0);
         //doggo.goForWalk(15.0);
 
-        var someNiceCar = new Car("Aventador", "Lamborghini", 730.0, "double wishbone rear suspension");
+        var someNiceCar = new Car("Enzo", "Ferrari", 730.0, "double wishbone rear suspension");
 
         Human.setCar(someNiceCar);
 
@@ -25,6 +25,15 @@ public class Program
 
         Human.setSalary(5000);
         Human.getSalary();
+        var expensiveCar = new Car("Enzo", "Ferrari", 730.0, "double wishbone rear suspension", 250000.0);
+
+        var richHooman = new Human("Bill", "Gates", 115.0, 999999, new Phone(95136, "5G"));
+
+        richHooman.setSalary(1000000);
+
+        richHooman.setCar(expensiveCar);
+
+
     }
 }
 
