@@ -70,4 +70,22 @@ public class Phone {
     {
         turnedOn = true;
     }
+
+    @Override
+    public void Sell(Human seller, Human buyer, Double price)
+    {
+        if(seller.getNumber() == this)
+        {
+            if(buyer.getCash() >= price)
+            {
+                buyer.minusCash(price);
+                seller.plusCash(price);
+                seller.removePhone(this);
+                buyer.addPhone( this);
+                System.out.println("Transaction succeded!");
+            }
+            else System.out.println("Sorry, transaction failed.");
+        }
+        else System.out.println("Sorry, transaction failed.");
+    }
 }

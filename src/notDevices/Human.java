@@ -1,3 +1,5 @@
+package notDevices;
+
 import devices.Car;
 import devices.Phone;
 
@@ -158,7 +160,7 @@ public class Human {
         }
         @Override
         public String toString() {
-        return "Human"{ +
+        return "notDevices.Human"{ +
                 "name=" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +

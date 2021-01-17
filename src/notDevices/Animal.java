@@ -1,3 +1,5 @@
+package notDevices;
+
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -86,16 +88,16 @@ public class Animal
         public boolean animalState()
         {
             if (weigth.doubleValue() <= 0) {
-                System.out.println("Animal is dead");
+                System.out.println("notDevices.Animal is dead");
                 isAlive = false;
                 return false;
             }
-            System.out.println("Animal lives... yet");
+            System.out.println("notDevices.Animal lives... yet");
             return true;
         }
         @Override
         public String toString() {
-        return "Animal{" +
+        return "notDevices.Animal{" +
                 "name='" + name + '\'' +
                 ", pic=" + pic +
                 ", species='" + species + '\'' +
