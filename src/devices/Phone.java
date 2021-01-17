@@ -1,10 +1,16 @@
 package devices;
+import notDevices.Human;
 
+import java.io.InputStream;
+import java.net.URL;
 public class Phone {
     private Integer number;
     private String net;
     private Integer dialling_code;
-
+    private boolean turnedOn = false;
+    private static  final String ADDRESS = "localhost.7742";
+    private static final String INSTALLPROTOCOL = "ABDFGDFG7679";
+    private static  final String APPVERSION = "newest";
     public Phone(Integer numberC, String netC, String model, String producer, Integer yearOfProduction)
     {
         super(model, producer, yearOfProduction);
@@ -87,5 +93,29 @@ public class Phone {
             else System.out.println("Sorry, transaction failed.");
         }
         else System.out.println("Sorry, transaction failed.");
+        public void installAnnApp(String appName)
+        {}
+        public  void installAnnApp(String appName, String appVersion)
+        {}
+
+        public  void installAnnApp(String appName, String appVersion, String serverAddress)
+        {}
+
+        public void installAnApp(String[] appNames)
+        {
+            for (var variable: appNames)
+            {
+                installAnnApp(variable);
+            }
+        }
+
+        public void installAnnApp(URL url)
+        {
+            String appName = "";
+            String serverAddress = "";
+            String appVersion = "";
+            installAnnApp(appName, appVersion, serverAddress);
+        }
+
     }
 }
