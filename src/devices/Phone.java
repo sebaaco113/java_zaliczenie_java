@@ -88,7 +88,7 @@ public class Phone {
                 seller.plusCash(price);
                 seller.removePhone(this);
                 buyer.addPhone( this);
-                System.out.println("Transaction succeded!");
+                System.out.println("notDevices.Transaction succeded!");
             }
             else System.out.println("Sorry, transaction failed.");
         }
