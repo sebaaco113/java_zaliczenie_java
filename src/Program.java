@@ -1,12 +1,14 @@
+import devices.Car;
+import devices.Phone;
+
 import java.io.File;
-import java.math.BigDecimal;
 
 public class Program
 {
     public static void main(String[] args)
     {
         Animal dog = new Animal("Brutus", new File("somedog.jpg"), "Pupper");
-        var NowakPhone = new Phone(1234567890, "someNet", 9999888);
+        var NowakPhone = new Phone("1234567890", "someNet", 9999888);
         var Human = new Human("Analiza","Kowalski", new Double(42), 000000001, NowakPhone, dog);
 
         dog.feed();
@@ -14,7 +16,7 @@ public class Program
         dog.goForWalk(15.0);
         //doggo.goForWalk(15.0);
 
-        var someNiceCar = new Car("Enzo", "Ferrari", 730.0, "double wishbone rear suspension");
+        var someNiceCar = new Car("458 Italia", "Ferrari", 730.0, "double wishbone rear suspension", 2011);
 
         Human.setCar(someNiceCar);
 
@@ -56,6 +58,9 @@ public class Program
         }
 
         System.out.println(otherExpensiveCar.toString());
+
+        expensiveCar.turnOn();
+        System.out.println(expensiveCar.toString());
     }
 }
 

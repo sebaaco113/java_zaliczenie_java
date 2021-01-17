@@ -1,3 +1,7 @@
+import devices.Car;
+import devices.Phone;
+
+
 public class Human {
     private String name;
     private String surname;
@@ -154,8 +158,8 @@ public class Human {
         }
         @Override
         public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
+        return "Human"{ +
+                "name=" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", id=" + id +
