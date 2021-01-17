@@ -7,7 +7,7 @@ public class Program
     {
         Animal dog = new Animal("Brutus", new File("somedog.jpg"), "Pupper");
         var NowakPhone = new Phone(1234567890, "someNet", 9999888);
-        var Human = new Human("Analiza","Kowalski", new Double(42), 000000001, kowalskyPhone, dog);
+        var Human = new Human("Analiza","Kowalski", new Double(42), 000000001, NowakPhone, dog);
 
         dog.feed();
         dog.goForWalk(5.0);
@@ -19,6 +19,12 @@ public class Program
         Human.setCar(someNiceCar);
 
         System.out.println("Human's car horsepower: " + Human.getCar().getHorsePower() + "\nHuman's car model: " + Human.getCar().model);
+        Human.getSalary();
+
+        Human.setSalary(-5000);
+
+        Human.setSalary(5000);
+        Human.getSalary();
     }
 }
 
