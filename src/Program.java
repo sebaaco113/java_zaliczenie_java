@@ -33,7 +33,29 @@ public class Program
 
         richHooman.setCar(expensiveCar);
 
+        var otherExpensiveCar = new Car("911", "Porsche", 520.0, "double wishbone rear suspension", 250000.0);
 
+        if(otherExpensiveCar == expensiveCar)
+        {
+            System.out.println("To to samo auto.");
+        }
+        else
+        {
+            System.out.println("To chyba różne auta.");
+        }
+
+        System.out.println(expensiveCar);
+
+        if(otherExpensiveCar.toString() == expensiveCar.toString())
+        {
+            System.out.println("To to samo auto.");
+        }
+        else
+        {
+            System.out.println("To chyba różne fury.");
+        }
+
+        System.out.println(otherExpensiveCar.toString());
     }
 }
 
