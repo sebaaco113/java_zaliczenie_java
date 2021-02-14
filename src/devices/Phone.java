@@ -3,7 +3,7 @@ import notDevices.Human;
 
 import java.io.InputStream;
 import java.net.URL;
-public class Phone {
+public class Phone extends Device {
     private Integer number;
     private String net;
     private Integer dialling_code;

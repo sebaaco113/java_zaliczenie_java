@@ -107,5 +107,5 @@ public class Program
         expensiveCar.Sell(merchant, peasant, 10000.0);
         expensiveCar.Sell(peasant, merchant, 7000.0);
         System.out.println(expensiveCar.toString());
-}
+}}
 

@@ -3,7 +3,7 @@ package Creatures;
 import java.math.BigDecimal;
 import java.io.File;
 
-public class FarmAnimal extends Animal implements Edible
+public abstract class FarmAnimal extends Animal implements Creatures.Edible
 {
     public FarmAnimal(String name, File pic, String species, BigDecimal weigth)
     {

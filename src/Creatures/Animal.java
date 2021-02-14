@@ -124,3 +124,5 @@ public abstract class Animal implements Saleable, Feedable
                 ", isAlive=" + isAlive +
                 '}';
     }
+
+    }

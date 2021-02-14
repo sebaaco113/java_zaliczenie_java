@@ -4,5 +4,5 @@ import notDevices.Human;
 
 public interface Saleable
 {
-    ublic  void Sell(Human seller, Human buyer, Double price) throws Exception;
+    public  void Sell(Human seller, Human buyer, Double price) throws Exception;
 }

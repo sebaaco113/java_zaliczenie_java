@@ -5,7 +5,7 @@ import devices.Phone;
 
 import java.util.Arrays;
 
-public class Human implements notDevices.Saleable
+public class Human extends Animal implements notDevices.Saleable
 {
     private String name;
     private String surname;

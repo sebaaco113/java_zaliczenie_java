@@ -14,6 +14,7 @@ public abstract class Car extends Device implements Comparable<Car>
     private double horsePower;
     private String suspenion;
     private double worth;
+    private Object Human;
 
     public Car(String model, String producer, double power, String suspenion, Integer yearOfProduction, double worth)
     {
@@ -22,6 +23,7 @@ public abstract class Car extends Device implements Comparable<Car>
         this.suspenion = suspenion;
     }
     public Car(String model, String producer, double power, String suspenion, double worth, Integer yearOfProduction)    {
+        {
         super(model, producer, yearOfProduction, worth);
         horsePower = power;
         this.suspenion = suspenion;
@@ -55,18 +57,18 @@ public abstract class Car extends Device implements Comparable<Car>
     }
     @Override
     public String toString()
-    {
-        return "devices.Car{" ++
-                "model='" + model + '\'' +
-                ", producer='" + producer + '\'' +
-                ", horsePower=" + horsePower +
-                ", suspenion='" + suspenion + '\'' +
-                        ", worth=" + value +
-                        ", turned on = " + turnedOn + '\'' +
-                        ", year of production = " + yearOfProduction + '\'' +
-                        ", Transactions: = " + getTransactions() + '\'' +
-                '}';
-
+        {
+            return "devices.Car{"++
+            "model='" + model + '\'' +
+                    ", producer='" + producer + '\'' +
+                    ", horsePower=" + horsePower +
+                    ", suspenion='" + suspenion + '\'' +
+                    ", worth=" + value +
+                    ", turned on = " + turnedOn + '\'' +
+                    ", year of production = " + yearOfProduction + '\'' +
+                    ", Transactions: = " + getTransactions() + '\'' +
+                    '}';
+        }
         public String getTransactions()
         {
             String result = "anything";
@@ -119,4 +121,4 @@ public abstract class Car extends Device implements Comparable<Car>
 
         public abstract void Refuel();
     }
-}
+}}
